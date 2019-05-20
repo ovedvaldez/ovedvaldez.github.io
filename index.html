@@ -6,29 +6,101 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <a href="index.html" class= "button"> -Home- </a>
-        <a href="Portfolio.html" class= "button"> -Portfolio- </a>
-        <a href="AboutMe.html" class= "button"> -About Me- </a>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <h1>My Future Career:</h1>
-        <h1>Hardware Engineer</h1>
-        SALARY: <br>
-        Entry Level- $75,000<br>
-        Average Level- $115,000<br>
-        <br>
-        JOB GROWTH:<br>
-        5 percent from 2016 to 2026. This is because<br>
-        most of the new demand jobs in engineering <br>
-        reside with software.<br>
+        <center> 
+            <a href="javascript:switchTab('tb_1', 'content_1');" id="tb_1" class= "button active"> -Home- </a>
+            <a href="javascript:switchTab('tb_2', 'content_2');" id="tb_2" class= "button active"> -Portfolio- </a>
+            <a href="javascript:switchTab('tb_3', 'content_3');" id="tb_3" class= "button active"> -About Me- </a>
+        </center>
         
-        
-        <center><img src="Images/career.jpeg" height="250"><center>
-    </body>
+            <div id="content_1" class="tabcontent"> 
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h1>Great Future Career: Hardware Engineer</h1>
+            SALARY: <br>
+            Entry Level- $75,000<br>
+            Average Level- $115,000<br>
+            <br>
+            JOB GROWTH:<br>
+            5 percent from 2016 to 2026. This is because<br>
+            most of the new demand jobs in engineering <br>
+            reside with software.<br>
+            <br>
+            Computer hardware engineers research, design, develop, and test computer<br>
+            systems and components such as processors, circuit boards, memory devices,<br>
+            networks, and routers. By creating new directions in computer hardware,<br>
+            hardware engineers can create rapid advances in computer technology.
+            
+            <center><img src="Images/career.jpeg" height="250"><center>
+            </div> 
+        <div id="content_2" class="tabcontent" style="display:none;">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <center><h1>Architecture</h1><center>
+            <h1>My TinyHouse</h1>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/fl-EhAW8wBQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <br>
+            </div>
+        <div id="content_3" class="tabcontent" style="display:none;">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1>Jesus Oved Valdez</h1>
+        <img src="Images/engineering.jpeg" height="250">
+        <br>
+        <a target="_blank" href="https://scratch.mit.edu">
+        </a>
+        Name:   Jesus Oved Valdez    <br>
+        Age:    18              <br>
+        Gender: Male            <br>
+        Gade:   Senior          <br>
+        Rank:   Top 5% (#31)    <br>
+        School: King High School<br>
+        Future University: UofH <br>
+        Degree: BS in Mechanical Engineering 
+                </div>
+     </body>
+    <script>
+        function switchTab(tab_id, tab_content) {
+            // first of all we get all tab content blocks (I think the best way to get them by class names)
+            var x = document.getElementsByClassName("tabcontent");
+            var i;
+            for (i = 0; i < x.length; i++) {
+            x[i].style.display = 'none'; // hide all tab content
+            }
+            document.getElementById(tab_content).style.display = 'block'; // display the content of the tab we need
+            
+            // now we get all tab menu items by class names (use the next code only if you need to highlight current tab)
+            var x = document.getElementsByClassName("button");
+            var i;
+            for (i = 0; i < x.length; i++) {
+            x[i].className = 'tabmenu'; 
+            }
+            document.getElementById(tab_id).className = 'button active';
+            }
+    </script>
 </html>
